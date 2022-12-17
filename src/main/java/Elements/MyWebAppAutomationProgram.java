@@ -12,10 +12,13 @@ public class MyWebAppAutomationProgram extends Methodlarim {
 
         search();
 
+        find ();
 
-        addbasket();
+        addBasket();
 
-        login();
+        finishShopping ();
+
+        //login();
 
 
     }

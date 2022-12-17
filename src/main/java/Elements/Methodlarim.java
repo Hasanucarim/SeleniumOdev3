@@ -13,6 +13,7 @@ public class Methodlarim extends Driver {
 
     static Constants constants = new Constants();
 
+
     public static void ChromeBrowser() {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
@@ -39,18 +40,27 @@ public class Methodlarim extends Driver {
         search.click();
     }
 
-
-
-    public static void addbasket() {
-        WebElement addbasket = driver.findElement(By.className("a-icon a-icon-cart"));
-        addbasket.click();
+    public static void find() {
+        WebElement find = driver.findElement(By.linkText("Apple iPhone 11 (128 GB) - Siyah"));
+        find.click();
     }
 
+   public static void addBasket() {
+        WebElement addBasket = driver.findElement(By.id("add-to-cart-button"));
+        addBasket.click();
+    }
+
+    public static void finishShopping() {
+
+        WebElement finishShopping = driver.findElement(By.xpath("//*[@id=\"attach-sidesheet-checkout-button\"][1]"));
+        finishShopping.click();
+
+    }
     public static void login() throws InterruptedException {
         WebElement login = driver.findElement(By.xpath("//form/div[1]/div[1]/div[1]/div[1]/input/@name"));
         login.click();
 
-        driver.findElement(By.id("ap_email")).sendKeys("hasanucarim@gmail.com");
+        driver.findElement(By.className("a-form-label")).sendKeys(constants.EMAIL);
         driver.findElement(By.id("ap_password")).sendKeys(constants.PASS);
 
         WebElement clickLogin = driver.findElement(By.id("signInSubmit"));
