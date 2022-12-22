@@ -18,7 +18,7 @@ public class MyWebAppAutomationProgram extends Methodlarim {
 
         finishShopping ();
 
-        //login();
+        login();
 
 
     }

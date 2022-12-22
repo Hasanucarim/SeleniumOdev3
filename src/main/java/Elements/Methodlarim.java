@@ -52,7 +52,7 @@ public class Methodlarim extends Driver {
 
     public static void finishShopping() {
 
-        WebElement finishShopping = driver.findElement(By.xpath("//*[@id=\"attach-sidesheet-checkout-button\"][1]"));
+        WebElement finishShopping = driver.findElement(By.xpath("//*[@id=/attach-sidesheet-checkout-button/][1]"));
         finishShopping.click();
 
     }
@@ -60,8 +60,8 @@ public class Methodlarim extends Driver {
         WebElement login = driver.findElement(By.xpath("//form/div[1]/div[1]/div[1]/div[1]/input/@name"));
         login.click();
 
-        driver.findElement(By.className("a-form-label")).sendKeys(constants.EMAIL);
-        driver.findElement(By.id("ap_password")).sendKeys(constants.PASS);
+        driver.findElement(By.className("a-input-text a-span12 auth-autofocus auth-required-field")).sendKeys(constants.EMAIL);
+        driver.findElement(By.className("a-form-label")).sendKeys(constants.PASS);
 
         WebElement clickLogin = driver.findElement(By.id("signInSubmit"));
         Thread.sleep(3000);
